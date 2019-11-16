@@ -1,0 +1,271 @@
+.trendingContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-auto-rows: minmax(min-content, max-content);
+  position: relative;
+  grid-template-areas: "leftColumn middleColumn rightColumn";
+  margin-bottom: 20px;
+  grid-auto-flow: row dense;
+  grid-gap: 20px;
+}
+.leftColumn {
+  grid-area: leftColumn;
+  position: relative;
+}
+.relativeLeadPos,
+.relativePos {
+  position: relative;
+}
+.rightColumn {
+  grid-area: rightColumn;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+}
+.rightStory {
+  grid-area: rightStory;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+  margin: 20px 0;
+}
+.middleBottomRow .relativePos:first-child::after,
+.leftColumn::after {
+  content: "";
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  right: -10px;
+  background: var(--gray-light);
+  position: absolute;
+  margin-top: 34px;
+}
+.rightColumn::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  left: -10px;
+  background: var(--gray-light);
+  position: absolute;
+}
+.rightStory::before {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 1px;
+  top: -10px;
+  background: var(--gray-light);
+}
+.middleColumn {
+  grid-area: middleColumn;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "trendingRow" "middleLeadRow" "middleBottomRow";
+  grid-gap: 10px;
+}
+.trendingRow {
+  grid-area: trendingRow;
+  position: relative;
+}
+.middleLeadRow {
+  grid-area: middleLeadRow;
+  position: relative;
+  margin-bottom: 10px;
+}
+.middleBottomRow {
+  grid-area: middleBottomRow;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  position: relative;
+}
+
+.trendingIcon {
+  top: 3px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  position: absolute;
+}
+.trending {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.excerpt {
+  color: #666666;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.textOverlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(transparent 50%, black);
+}
+.textOverlay .leadTitle {
+  bottom: 64px;
+  padding: 0 20px;
+  position: inherit;
+}
+.leadTitle a {
+  color: var(--white);
+}
+.excerptOverlay {
+  bottom: 35px;
+  padding: 0 20px;
+  color: var(--white);
+  position: inherit;
+}
+.textOverlay .sectionTime {
+  bottom: 10px;
+  padding: 0 20px;
+  color: var(--gray-small);
+  position: inherit;
+}
+.textOverlay > img {
+  position: relative;
+}
+.storyListRow::after,
+.trendingContainer::after,
+.middleLeadRow::after {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 1px;
+  bottom: -10px;
+  background: var(--gray-light);
+}
+.storyListRow {
+  position: relative;
+  margin-bottom: 20px;
+}
+.adSpace {
+  grid-area: adSpace;
+}
+.rightStoryList {
+  grid-area: rightStoryList;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+/* TAB */
+@media (min-width: 876px) and (max-width: 1263px) {
+  .trendingContainer {
+    grid-template-areas:
+      "leftColumn middleColumn middleColumn"
+      "leftColumn rightColumn rightColumn";
+  }
+  .rightColumn {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "rightStoryList adSpace";
+    position: relative;
+    margin-top: 0;
+  }
+  .middleColumn::after {
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 1px;
+    bottom: -10px;
+    background: var(--gray-light);
+  }
+  .rightColumn::before,
+  .rightStory:first-child::before {
+    all: unset;
+  }
+  .rightStoryList::after {
+    content: "";
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    right: -10px;
+    background: var(--gray-light);
+    position: absolute;
+  }
+  .middleBottomRow .relativePos:first-child::after {
+    margin-top: 0;
+  }
+}
+/* MObile */
+@media (max-width: 875px) {
+  .trendingContainer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "leftColumn"
+      "middleColumn"
+      "rightColumn";
+  }
+  .leftColumn {
+    order: 0;
+  }
+  .middleColumn {
+    order: 1;
+  }
+  .rightColumn {
+    order: 2;
+    margin-top: 0;
+  }
+  .middleBottomRow {
+    grid-template-columns: 1fr;
+  }
+  .relativePos {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+  }
+  .hideImage,
+  .middleBottomRow .sectionTime,
+  .middleBottomRow .excerpt {
+    display: none;
+  }
+  .textOverlay .leadTitle {
+    color: var(--text-color);
+    padding: 0;
+  }
+  .rightColumn::before,
+  .textOverlay,
+  .leftColumn::after,
+  .excerptOverlay {
+    all: unset;
+  }
+  .rightStory {
+    grid-template-columns: 1fr;
+  }
+  .leadTitle a {
+    color: var(--text-color);
+  }
+  .middleBottomRow .relativePos:first-child::after {
+    content: "";
+    top: auto;
+    bottom: -10px;
+    width: auto;
+    height: 1px;
+    left: 0;
+    right: 0;
+    background: var(--gray-light);
+    position: absolute;
+  }
+  .relativePos::after {
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 1px;
+    bottom: -10px;
+    background: var(--gray-light);
+  }
+}

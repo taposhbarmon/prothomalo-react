@@ -1,0 +1,151 @@
+.opinionContainer {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 40% 1fr;
+  grid-template-areas: "leftSide rightSide";
+  position: relative;
+  margin-bottom: 20px;
+}
+.leftSide {
+  grid-area: leftSide;
+  position: relative;
+}
+.rightSide {
+  grid-area: rightSide;
+  position: relative;
+}
+.underlineAuthor {
+  height: 3px;
+  background-color: var(--cyan);
+  width: 45px;
+  margin-top: 7px;
+  margin-bottom: 3px;
+}
+small {
+  color: var(--gray-small);
+}
+.opinioBox {
+  padding: 0 36px;
+}
+.opinioAuthor {
+  padding: 15px;
+  border: 1px solid var(--gray-small);
+  border-radius: 2px;
+}
+.overlayText {
+  margin-left: -35px;
+  max-width: 200px;
+}
+h2 span {
+  color: var(--white);
+  font-weight: bold;
+  letter-spacing: -1px;
+  background: var(--gray-dark);
+  padding: 1px 7px;
+  line-height: 35px;
+}
+.authorSpeech {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 30px;
+}
+.authorThum {
+  width: 80px;
+  height: 80px;
+  background: #ccc;
+  border-radius: 50%;
+}
+.authorThumL {
+  width: 120px;
+  height: 120px;
+  background: #ccc;
+  border-radius: 50%;
+}
+.center p {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+.opinioTitle {
+  color: var(--cyan);
+  font-size: 18px;
+}
+.speakerInfo {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.opinionList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  /* justify-content: space-between; */
+  position: relative;
+}
+.headlineList {
+  position: relative;
+}
+.opinionContainer::after {
+  height: 1px;
+  background: var(--gray-light);
+  bottom: -10px;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+}
+.opinionList::after {
+  height: 1px;
+  background: var(--gray-light);
+  bottom: -10px;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  margin-left: 100px;
+}
+.opinionList:last-child::after {
+  content: none;
+}
+.marginRight20 {
+  margin-right: 20px;
+}
+/* TAB */
+@media (min-width: 876px) and (max-width: 1263px) {
+  .opinionContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* MObile */
+@media (max-width: 875px) {
+  .opinionContainer {
+    grid-template-columns: 1fr;
+    grid-template-areas: "leftSide" "rightSide";
+  }
+  .opinionList {
+    display: grid;
+    grid-gap: 20px;
+  }
+  .marginRight20 {
+    margin-right: 0;
+  }
+  .headlineList {
+    all: unset;
+  }
+  .opinionList::after {
+    margin-left: 0;
+  }
+  .authorSpeech {
+    width: 100%;
+  }
+  .authorThumL {
+    width: 80px;
+    height: 80px;
+  }
+  .headlineList::after {
+    all: unset;
+  }
+}

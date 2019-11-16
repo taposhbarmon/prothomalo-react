@@ -1,0 +1,70 @@
+.headerContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+.top-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "leftItems centerLogo rightItems";
+}
+.leftItems {
+  grid-area: leftItems;
+  position: relative;
+}
+.centerLogo {
+  grid-area: centerLogo;
+  position: relative;
+  text-align: center;
+}
+.rightItems {
+  grid-area: rightItems;
+  text-align: right;
+}
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+nav ul {
+  padding: 0;
+}
+.header-menu li {
+  margin: 0 10px;
+}
+.header-menu li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+}
+.btn-login {
+  border: 1px solid var(--gray-small);
+  padding: 2px 20px;
+  border-radius: 2px;
+  background-color: var(--white);
+  color: var(--text-color);
+  font-size: 16px;
+}
+.login-arrow {
+  margin-left: 5px;
+  color: var(--gray);
+  font-size: 12px;
+}
+hr.inner {
+  border: 1px solid var(--gray-light);
+}
+/* monile */
+@media (max-width: 875px) {
+  .top-news-row2 {
+    display: block;
+  }
+  .mobile-view,
+  .date-time-weather {
+    display: none;
+  }
+  .leftItems {
+    align-self: end;
+  }
+}
