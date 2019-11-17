@@ -24,10 +24,8 @@ class OpinionSection extends Component {
               <div className={opinionStyle.opinioAuthor}>
                 <span className={opinionStyle.opinioTitle}>গদ্য কার্টুন</span>
                 <h2 className={opinionStyle.overlayText}>
-                  <span>
+                  <span className={opinionStyle.boxShadow}>
                     {story.headline}
-                    {/* সাংবাদিকতা এখন বিরাট &nbsp;<br></br>&nbsp;চ্যালেঞ্জের
-                    মুখোমুখি:&nbsp;<br></br>&nbsp;মাহ্ফুজ আনাম */}
                   </span>
                 </h2>
                 <div className={opinionStyle.authorSpeech}>
