@@ -23,13 +23,14 @@ class PhotoGallery extends Component {
           <div className={galleryStyle.leftColumn}>
             {this.state.leftColumn.map(story => (
               <div className={galleryStyle.relativeLeadPos}>
-                <div>
+                <div className="image-ratio image-pad45">
                   <img
-                    className="responsive-img"
+                    className="image-content"
                     src={
                       "http://thumbor-stg.assettype.com/" +
                       story["hero-image-s3-key"]
                     }
+                    alt=""
                   />
                 </div>
                 <div className={galleryStyle.textOverlay}>
@@ -45,13 +46,14 @@ class PhotoGallery extends Component {
           <div className={galleryStyle.rightTopRow}>
             {this.state.rightTopRow.map(story => (
               <div className={galleryStyle.relativeLeadPos}>
-                <div>
+                <div className="image-ratio">
                   <img
-                    className="responsive-img"
+                    className="image-content"
                     src={
                       "http://thumbor-stg.assettype.com/" +
                       story["hero-image-s3-key"]
                     }
+                    alt=""
                   />
                 </div>
                 <div className={galleryStyle.textOverlay}>
@@ -67,13 +69,14 @@ class PhotoGallery extends Component {
           <div className={galleryStyle.rightBottomRow}>
             {this.state.rightBottomRow.map(story => (
               <div className={galleryStyle.relativeLeadPos}>
-                <div>
+                <div className="image-ratio image-pad30">
                   <img
-                    className="responsive-img"
+                    className="image-content"
                     src={
                       "http://thumbor-stg.assettype.com/" +
                       story["hero-image-s3-key"]
                     }
+                    alt=""
                   />
                 </div>
                 <div className={galleryStyle.textOverlay}>

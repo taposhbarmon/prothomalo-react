@@ -24,13 +24,16 @@ class EconomicsStories extends Component {
           <div className={econoStyle.leftColumn}>
             {this.state.leftColumn.map(story => (
               <div>
-                <img
-                  className="responsive-img"
-                  src={
-                    "http://thumbor-stg.assettype.com/" +
-                    story["hero-image-s3-key"]
-                  }
-                />
+                <div className="image-ratio">
+                  <img
+                    className="image-content"
+                    src={
+                      "http://thumbor-stg.assettype.com/" +
+                      story["hero-image-s3-key"]
+                    }
+                    alt=""
+                  />
+                </div>
                 <div className="title-lead">
                   <a href={story.slug}>{story.headline}</a>
                 </div>
@@ -54,13 +57,16 @@ class EconomicsStories extends Component {
             {this.state.rightColumn.map(story => (
               <div className={econoStyle.rightStory}>
                 <div className="imageLeftToRight">
-                  <img
-                    className="responsive-img"
-                    src={
-                      "http://thumbor-stg.assettype.com/" +
-                      story["hero-image-s3-key"]
-                    }
-                  />
+                  <div className="image-ratio">
+                    <img
+                      className="image-content"
+                      src={
+                        "http://thumbor-stg.assettype.com/" +
+                        story["hero-image-s3-key"]
+                      }
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div>
                   <div className="title-midiam">

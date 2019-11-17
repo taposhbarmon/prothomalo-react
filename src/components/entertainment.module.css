@@ -67,7 +67,7 @@
   .entertainContainer {
     grid-template-columns: 1fr 2fr 1fr;
   }
-  .leftImageStory img {
+  .imageHide {
     display: none;
   }
   .leftImageStory {
@@ -110,5 +110,8 @@
   }
   .middleColumn:before {
     all: unset;
+  }
+  .rightColumn .imageHide {
+    display: none;
   }
 }

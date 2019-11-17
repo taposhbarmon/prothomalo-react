@@ -33,13 +33,16 @@ class BangladeshStories extends Component {
           <div className={bdStyle.leftTopColumn}>
             {this.state.leftTopColumn.map(story => (
               <div>
-                <img
-                  className="responsive-img"
-                  src={
-                    "http://thumbor-stg.assettype.com/" +
-                    story["hero-image-s3-key"]
-                  }
-                />
+                <div className="image-ratio">
+                  <img
+                    className="image-content"
+                    src={
+                      "http://thumbor-stg.assettype.com/" +
+                      story["hero-image-s3-key"]
+                    }
+                    alt=""
+                  />
+                </div>
                 <div className="title-lead">
                   <a href={story.slug}>{story.headline}</a>
                 </div>
@@ -63,13 +66,16 @@ class BangladeshStories extends Component {
             {this.state.middleTopColumn.map(story => (
               <div className={bdStyle.relativePos}>
                 <div className="imageLeftToRight">
-                  <img
-                    className="responsive-img"
-                    src={
-                      "http://thumbor-stg.assettype.com/" +
-                      story["hero-image-s3-key"]
-                    }
-                  />
+                  <div className="image-ratio">
+                    <img
+                      className="image-content"
+                      src={
+                        "http://thumbor-stg.assettype.com/" +
+                        story["hero-image-s3-key"]
+                      }
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div className="title-midiam">
                   <a href={story.slug}>{story.headline}</a>
@@ -81,13 +87,16 @@ class BangladeshStories extends Component {
             {this.state.leftBottomColumn.map(story => (
               <div className={bdStyle.relativePosRow}>
                 <div className="imageHide">
-                  <img
-                    className="responsive-img"
-                    src={
-                      "http://thumbor-stg.assettype.com/" +
-                      story["hero-image-s3-key"]
-                    }
-                  />
+                  <div className="image-ratio">
+                    <img
+                      className="image-content"
+                      src={
+                        "http://thumbor-stg.assettype.com/" +
+                        story["hero-image-s3-key"]
+                      }
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div className="title-midiam">
                   <a href={story.slug}>{story.headline}</a>

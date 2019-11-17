@@ -40,6 +40,8 @@
   right: -10px;
   background: var(--gray-light);
   position: absolute;
+}
+.leftColumn::after {
   margin-top: 34px;
 }
 .rightColumn::before {
@@ -238,9 +240,13 @@
   }
   .rightColumn::before,
   .textOverlay,
-  .leftColumn::after,
-  .excerptOverlay {
+  .leftColumn::after {
     all: unset;
+  }
+  .leadTitle .excerptOverlay {
+    all: unset;
+    font-size: 16px;
+    font-weight: normal;
   }
   .rightStory {
     grid-template-columns: 1fr;

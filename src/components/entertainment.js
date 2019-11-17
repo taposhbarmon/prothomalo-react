@@ -27,14 +27,17 @@ class Entertainment extends Component {
           <div className={styleClass.leftColumn}>
             {this.state.leftColumn.map(story => (
               <div className={styleClass.leftImageStory}>
-                <div className="imageLeftToRight">
-                  <img
-                    className="responsive-img"
-                    src={
-                      "http://thumbor-stg.assettype.com/" +
-                      story["hero-image-s3-key"]
-                    }
-                  />
+                <div className={`imageLeftToRight ${styleClass.imageHide}`}>
+                  <div className="image-ratio image-pad15">
+                    <img
+                      className="image-content"
+                      src={
+                        "http://thumbor-stg.assettype.com/" +
+                        story["hero-image-s3-key"]
+                      }
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div>
                   <div className="title-midiam">{story.headline}</div>
@@ -48,13 +51,16 @@ class Entertainment extends Component {
           <div className={styleClass.middleColumn}>
             {this.state.middelColumn.map(story => (
               <div>
-                <img
-                  className="responsive-img"
-                  src={
-                    "http://thumbor-stg.assettype.com/" +
-                    story["hero-image-s3-key"]
-                  }
-                />
+                <div className="image-ratio">
+                  <img
+                    className="image-content"
+                    src={
+                      "http://thumbor-stg.assettype.com/" +
+                      story["hero-image-s3-key"]
+                    }
+                    alt=""
+                  />
+                </div>
                 <div className="title-lead">{story.headline}</div>
                 <div className="underline-gray"></div>
                 <div className="excerpt">{story.subheadline}</div>
@@ -75,14 +81,17 @@ class Entertainment extends Component {
           <div className={styleClass.rightColumn}>
             {this.state.rightColumn.map(story => (
               <div className={styleClass.leftImageStory}>
-                <div className="imageHide">
-                  <img
-                    className="responsive-img"
-                    src={
-                      "http://thumbor-stg.assettype.com/" +
-                      story["hero-image-s3-key"]
-                    }
-                  />
+                <div className={styleClass.imageHide}>
+                  <div className="image-ratio image-pad15">
+                    <img
+                      className="image-content"
+                      src={
+                        "http://thumbor-stg.assettype.com/" +
+                        story["hero-image-s3-key"]
+                      }
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div>
                   <div className="title-midiam">{story.headline}</div>

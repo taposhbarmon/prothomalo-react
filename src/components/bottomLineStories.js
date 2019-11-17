@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styleClass from "./bottomLineStories.module.css";
+import bottomStyle from "./bottomLineStories.module.css";
 
 class BottomLineStories extends Component {
   state = { leftColumn: [], middleLeft: [], middleRight: [], rightColumn: [] };
@@ -21,21 +21,24 @@ class BottomLineStories extends Component {
 
   render() {
     return (
-      <div className={styleClass.bottomLinecontainer}>
+      <div className={bottomStyle.bottomLinecontainer}>
         <div>
           <article>আন্তর্জাতিক</article>
-          <div className={styleClass.storyHolder}>
+          <div className={bottomStyle.storyHolder}>
             {this.state.leftColumn.map((story, i) => {
               if (i == 0) {
                 return (
                   <div>
-                    <img
-                      className="responsive-img"
-                      src={
-                        "http://thumbor-stg.assettype.com/" +
-                        story["hero-image-s3-key"]
-                      }
-                    />
+                    <div className="image-ratio">
+                      <img
+                        className="image-content"
+                        src={
+                          "http://thumbor-stg.assettype.com/" +
+                          story["hero-image-s3-key"]
+                        }
+                        alt=""
+                      />
+                    </div>
                     <div>
                       <div className="title-midiam">{story.headline}</div>
                       <div className="section-time">
@@ -54,26 +57,29 @@ class BottomLineStories extends Component {
                 );
               }
             })}
-            <div className={styleClass.center}>
-              <button class={styleClass.btnMore}>আরও খবর</button>
+            <div className={bottomStyle.center}>
+              <button class={bottomStyle.btnMore}>আরও খবর</button>
             </div>
           </div>
         </div>
 
         <div>
           <article>জীবনযাপন</article>
-          <div className={styleClass.storyHolder}>
+          <div className={bottomStyle.storyHolder}>
             {this.state.middleLeft.map((story, i) => {
               if (i == 0) {
                 return (
                   <div>
-                    <img
-                      className="responsive-img"
-                      src={
-                        "http://thumbor-stg.assettype.com/" +
-                        story["hero-image-s3-key"]
-                      }
-                    />
+                    <div className="image-ratio">
+                      <img
+                        className="image-content"
+                        src={
+                          "http://thumbor-stg.assettype.com/" +
+                          story["hero-image-s3-key"]
+                        }
+                        alt=""
+                      />
+                    </div>
                     <div>
                       <div className="title-midiam">{story.headline}</div>
                       <div className="section-time">
@@ -92,26 +98,29 @@ class BottomLineStories extends Component {
                 );
               }
             })}
-            <div className={styleClass.center}>
-              <button class={styleClass.btnMore}>আরও খবর</button>
+            <div className={bottomStyle.center}>
+              <button class={bottomStyle.btnMore}>আরও খবর</button>
             </div>
           </div>
         </div>
 
         <div>
           <article>উত্তর আমেরিকা</article>
-          <div className={styleClass.storyHolder}>
+          <div className={bottomStyle.storyHolder}>
             {this.state.middleRight.map((story, i) => {
               if (i == 0) {
                 return (
                   <div>
-                    <img
-                      className="responsive-img"
-                      src={
-                        "http://thumbor-stg.assettype.com/" +
-                        story["hero-image-s3-key"]
-                      }
-                    />
+                    <div className="image-ratio">
+                      <img
+                        className="image-content"
+                        src={
+                          "http://thumbor-stg.assettype.com/" +
+                          story["hero-image-s3-key"]
+                        }
+                        alt=""
+                      />
+                    </div>
                     <div>
                       <div className="title-midiam">{story.headline}</div>
                       <div className="section-time">
@@ -130,26 +139,29 @@ class BottomLineStories extends Component {
                 );
               }
             })}
-            <div className={styleClass.center}>
-              <button class={styleClass.btnMore}>আরও খবর</button>
+            <div className={bottomStyle.center}>
+              <button class={bottomStyle.btnMore}>আরও খবর</button>
             </div>
           </div>
         </div>
 
         <div>
           <article>ENGLISH</article>
-          <div className={styleClass.storyHolder}>
+          <div className={bottomStyle.storyHolder}>
             {this.state.rightColumn.map((story, i) => {
               if (i == 0) {
                 return (
                   <div>
-                    <img
-                      className="responsive-img"
-                      src={
-                        "http://thumbor-stg.assettype.com/" +
-                        story["hero-image-s3-key"]
-                      }
-                    />
+                    <div className="image-ratio">
+                      <img
+                        className="image-content"
+                        src={
+                          "http://thumbor-stg.assettype.com/" +
+                          story["hero-image-s3-key"]
+                        }
+                        alt=""
+                      />
+                    </div>
                     <div>
                       <div className="title-midiam">{story.headline}</div>
                       <div className="section-time">
@@ -168,8 +180,8 @@ class BottomLineStories extends Component {
                 );
               }
             })}
-            <div className={styleClass.center}>
-              <button class={styleClass.btnMore}>আরও খবর</button>
+            <div className={bottomStyle.center}>
+              <button class={bottomStyle.btnMore}>আরও খবর</button>
             </div>
           </div>
         </div>

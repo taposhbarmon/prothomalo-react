@@ -21,13 +21,16 @@ class MyFavoriteStories extends Component {
           {this.state.favoriteRow.map(story => (
             <div className={favoriteStyle.relativePos}>
               <div className="imageLeftToRight">
-                <img
-                  className="responsive-img"
-                  src={
-                    "http://thumbor-stg.assettype.com/" +
-                    story["hero-image-s3-key"]
-                  }
-                />
+                <div className="image-ratio">
+                  <img
+                    className="image-content"
+                    src={
+                      "http://thumbor-stg.assettype.com/" +
+                      story["hero-image-s3-key"]
+                    }
+                    alt=""
+                  />
+                </div>
               </div>
               <div className="title-midiam">{story.headline}</div>
               <div className={favoriteStyle.underlineGray}></div>

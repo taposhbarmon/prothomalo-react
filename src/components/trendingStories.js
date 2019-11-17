@@ -56,13 +56,14 @@ class TrendingStories extends Component {
           <div className={trendStyle.middleLeadRow}>
             {this.state.middleColumnLead.map(story => (
               <div className={trendStyle.relativeLeadPos}>
-                <div>
+                <div className="image-ratio">
                   <img
-                    className="responsive-img"
+                    className="image-content"
                     src={
                       "http://thumbor-stg.assettype.com/" +
                       story["hero-image-s3-key"]
                     }
+                    alt=""
                   />
                 </div>
                 <div className={trendStyle.textOverlay}>
@@ -92,13 +93,16 @@ class TrendingStories extends Component {
             {this.state.middleColumnStory.map(story => (
               <div className={trendStyle.relativePos}>
                 <div className="imageLeftToRight">
-                  <img
-                    className="responsive-img"
-                    src={
-                      "http://thumbor-stg.assettype.com/" +
-                      story["hero-image-s3-key"]
-                    }
-                  />
+                  <div className="image-ratio">
+                    <img
+                      className="image-content"
+                      src={
+                        "http://thumbor-stg.assettype.com/" +
+                        story["hero-image-s3-key"]
+                      }
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div className="title-midiam">
                   <a href={story.slug}>{story.headline}</a>
@@ -191,13 +195,16 @@ class TrendingStories extends Component {
               return (
                 <div className={trendStyle.rightStory}>
                   <div className={trendStyle.hideImage}>
-                    <img
-                      className="responsive-img"
-                      src={
-                        "http://thumbor-stg.assettype.com/" +
-                        story["hero-image-s3-key"]
-                      }
-                    />
+                    <div className="image-ratio image-pad20">
+                      <img
+                        className="image-content"
+                        src={
+                          "http://thumbor-stg.assettype.com/" +
+                          story["hero-image-s3-key"]
+                        }
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <div className="title-midiam">
                     <a href={story.slug}>{story.headline}</a>

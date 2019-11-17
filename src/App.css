@@ -42,10 +42,41 @@ a {
   display: block;
   overflow: hidden;
 }
-.responsive-img {
+img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+.image-ratio {
+  position: relative;
+  display: block;
+}
+.image-ratio:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: var(--gray-small);
+}
+.image-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-pad15 {
+  padding-bottom: 15%;
+}
+.image-pad20 {
+  padding-bottom: 20%;
+}
+.image-pad30 {
+  padding-bottom: 30%;
+}
+.image-pad45 {
+  padding-bottom: 45%;
 }
 section {
   font-size: 20px;
@@ -233,6 +264,9 @@ article::after {
   .container1-last {
     display: none;
   }
+  .image-tabpad20 {
+    padding-bottom: 20%;
+  }
 }
 /* MObile */
 @media (max-width: 875px) {
@@ -248,5 +282,8 @@ article::after {
   .excerpt-hide,
   .imageHide {
     display: none;
+  }
+  .image-ratio {
+    max-width: 100%;
   }
 }

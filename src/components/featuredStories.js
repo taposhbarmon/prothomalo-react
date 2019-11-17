@@ -56,13 +56,16 @@ class FeaturedSroties extends Component {
                   </div>
                 </div>
                 <div>
-                  <img
-                    className="responsive-img"
-                    src={
-                      "http://thumbor-stg.assettype.com/" +
-                      story["hero-image-s3-key"]
-                    }
-                  />
+                  <div className="">
+                    <img
+                      className=""
+                      src={
+                        "http://thumbor-stg.assettype.com/" +
+                        story["hero-image-s3-key"]
+                      }
+                      alt=""
+                    />
+                  </div>
                   <div className="caption caption-hide">
                     ছবি ক্যাপশন ছবি ক্যাপশন
                   </div>
@@ -115,13 +118,16 @@ class FeaturedSroties extends Component {
             <div className={styleClass.thumNews}>
               <div className={styleClass.thumNewsList}>
                 <div className={styleClass.imageRight}>
-                  <img
-                    className="responsive-img"
-                    src={
-                      "http://thumbor-stg.assettype.com/" +
-                      story["hero-image-s3-key"]
-                    }
-                  />
+                  <div className="image-ratio image-pad15">
+                    <img
+                      className="image-content"
+                      src={
+                        "http://thumbor-stg.assettype.com/" +
+                        story["hero-image-s3-key"]
+                      }
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div className="title-midiam">{story.headline}</div>
               </div>
@@ -137,13 +143,16 @@ class FeaturedSroties extends Component {
                   return (
                     <div className={styleClass.videoLeadNews}>
                       <div className={styleClass.imgPos}>
-                        <img
-                          className="responsive-img"
-                          src={
-                            "http://thumbor-stg.assettype.com/" +
-                            story["hero-image-s3-key"]
-                          }
-                        />
+                        <div className="image-ratio image-tabpad20">
+                          <img
+                            className="image-content"
+                            src={
+                              "http://thumbor-stg.assettype.com/" +
+                              story["hero-image-s3-key"]
+                            }
+                            alt=""
+                          />
+                        </div>
                         <i
                           className={`${styleClass.playIcon} fas fa-play-circle`}
                         ></i>
@@ -155,13 +164,16 @@ class FeaturedSroties extends Component {
                   return (
                     <div className={styleClass.videoNews}>
                       <div className={styleClass.imgPos}>
-                        <img
-                          className="responsive-img"
-                          src={
-                            "http://thumbor-stg.assettype.com/" +
-                            story["hero-image-s3-key"]
-                          }
-                        />
+                        <div className="image-ratio image-pad20">
+                          <img
+                            className="image-content"
+                            src={
+                              "http://thumbor-stg.assettype.com/" +
+                              story["hero-image-s3-key"]
+                            }
+                            alt=""
+                          />
+                        </div>
                         <i
                           className={`${styleClass.playIconS} fas fa-play-circle`}
                         ></i>
