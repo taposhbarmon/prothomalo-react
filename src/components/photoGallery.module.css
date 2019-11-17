@@ -23,6 +23,7 @@
 }
 .relativeLeadPos {
   position: relative;
+  display: inline-table;
 }
 .textOverlay {
   content: "";

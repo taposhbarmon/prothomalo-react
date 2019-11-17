@@ -19,8 +19,8 @@ class BangladeshStories extends Component {
     const response = await fetch(corsURL + apiURL);
     const allStories = await response.json();
     this.setState({
-      leftTopColumn: allStories.stories.slice(1, 2),
-      middleTopColumn: allStories.stories.slice(3, 5),
+      leftTopColumn: allStories.stories.slice(0, 1),
+      middleTopColumn: allStories.stories.slice(1, 3),
       leftBottomColumn: allStories.stories.slice(4, 7)
     });
   }

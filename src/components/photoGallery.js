@@ -6,13 +6,13 @@ class PhotoGallery extends Component {
 
   async componentDidMount() {
     const corsURL = "https://cors-anywhere.herokuapp.com/";
-    const apiURL = "https://prothomalo-web.qtstage.io/api/v1/stories?limit=5";
+    const apiURL = "https://prothomalo-web.qtstage.io/api/v1/stories?offset=7";
     const response = await fetch(corsURL + apiURL);
     const allStories = await response.json();
     this.setState({
-      leftColumn: allStories.stories.slice(4, 5),
-      rightTopRow: allStories.stories.slice(1, 2),
-      rightBottomRow: allStories.stories.slice(2, 4)
+      leftColumn: allStories.stories.slice(0, 1),
+      rightTopRow: allStories.stories.slice(2, 3),
+      rightBottomRow: allStories.stories.slice(3, 5)
     });
   }
   render() {
@@ -33,7 +33,9 @@ class PhotoGallery extends Component {
                   />
                 </div>
                 <div className={galleryStyle.textOverlay}>
-                  <div className={`title-large ${galleryStyle.leadTitle}`}>
+                  <div
+                    className={`photo-title font-l ${galleryStyle.leadTitle}`}
+                  >
                     <i class="fas fa-images"></i> {story.headline}
                   </div>
                 </div>
@@ -53,7 +55,9 @@ class PhotoGallery extends Component {
                   />
                 </div>
                 <div className={galleryStyle.textOverlay}>
-                  <div className={`title-midiam ${galleryStyle.leadTitle}`}>
+                  <div
+                    className={`photo-title font-m ${galleryStyle.leadTitle}`}
+                  >
                     <i class="fas fa-images"></i> {story.headline}
                   </div>
                 </div>
@@ -73,7 +77,9 @@ class PhotoGallery extends Component {
                   />
                 </div>
                 <div className={galleryStyle.textOverlay}>
-                  <div className={`photo-title ${galleryStyle.leadTitle}`}>
+                  <div
+                    className={`photo-title font-s ${galleryStyle.leadTitle}`}
+                  >
                     <i class="fas fa-images"></i> {story.headline}
                   </div>
                 </div>

@@ -13,9 +13,9 @@ class Entertainment extends Component {
     const allStories = await response.json();
     //console.log(allStories.stories[0]);
     this.setState({
-      middelColumn: allStories.stories.slice(1, 2),
+      middelColumn: allStories.stories.slice(8, 9),
       leftColumn: allStories.stories.slice(1, 5),
-      rightColumn: allStories.stories.slice(5, 9)
+      rightColumn: allStories.stories.slice(3, 7)
     });
   }
 

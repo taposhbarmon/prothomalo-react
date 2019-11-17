@@ -8,12 +8,12 @@ class EconomicsStories extends Component {
 
   async componentDidMount() {
     const corsURL = "https://cors-anywhere.herokuapp.com/";
-    const apiURL = "https://prothomalo-web.qtstage.io/api/v1/stories?limit=6";
+    const apiURL = "https://prothomalo-web.qtstage.io/api/v1/stories?offset=7";
     const response = await fetch(corsURL + apiURL);
     const allStories = await response.json();
     this.setState({
       leftColumn: allStories.stories.slice(1, 2),
-      rightColumn: allStories.stories.slice(3, 6)
+      rightColumn: allStories.stories.slice(7, 10)
     });
   }
   render() {

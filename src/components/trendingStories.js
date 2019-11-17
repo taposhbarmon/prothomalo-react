@@ -41,7 +41,7 @@ class TrendingStories extends Component {
       leftColumnUpdated: allStories.stories.slice(1, 6),
       leftColumnViewed: allStories.stories.slice(5, 10),
       leftColumnFeatured: allStories.stories.slice(10, 15),
-      rightColumn: allStories.stories.slice(10, 13)
+      rightColumn: allStories.stories.slice(4, 7)
     });
   }
 

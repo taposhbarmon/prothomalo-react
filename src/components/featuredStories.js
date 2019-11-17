@@ -21,7 +21,7 @@ class FeaturedSroties extends Component {
     const allStories = await response.json();
     //console.log(allStories);
     this.setState({
-      leadStory: allStories.stories.slice(0, 1),
+      leadStory: allStories.stories.slice(1, 2),
       topMiddle: allStories.stories.slice(2, 3),
       leftTop: allStories.stories.slice(3, 6),
       leftBottom: allStories.stories.slice(1, 7),
