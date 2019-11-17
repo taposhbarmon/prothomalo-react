@@ -16,7 +16,7 @@ class FeaturedSroties extends Component {
 
   async componentDidMount() {
     const corsURL = "https://cors-anywhere.herokuapp.com/";
-    const apiURL = "https://prothomalo-web.qtstage.io/api/v1/stories?offset=4";
+    const apiURL = "https://prothomalo-web.qtstage.io/api/v1/stories?limit=16";
     const response = await fetch(corsURL + apiURL);
     const allStories = await response.json();
     //console.log(allStories);
@@ -24,8 +24,8 @@ class FeaturedSroties extends Component {
       leadStory: allStories.stories.slice(0, 1),
       topMiddle: allStories.stories.slice(2, 3),
       leftTop: allStories.stories.slice(3, 6),
-      leftBottom: allStories.stories.slice(4, 10),
-      rightColumn: allStories.stories.slice(7, 10)
+      leftBottom: allStories.stories.slice(1, 7),
+      rightColumn: allStories.stories.slice(4, 7)
     });
   }
 

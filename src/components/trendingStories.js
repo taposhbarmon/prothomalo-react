@@ -36,8 +36,8 @@ class TrendingStories extends Component {
     const response = await fetch(corsURL + apiURL);
     const allStories = await response.json();
     this.setState({
-      middleColumnLead: allStories.stories.slice(0, 1),
-      middleColumnStory: allStories.stories.slice(2, 4),
+      middleColumnLead: allStories.stories.slice(3, 4),
+      middleColumnStory: allStories.stories.slice(1, 3),
       leftColumnUpdated: allStories.stories.slice(1, 6),
       leftColumnViewed: allStories.stories.slice(5, 10),
       leftColumnFeatured: allStories.stories.slice(10, 15),
@@ -68,10 +68,11 @@ class TrendingStories extends Component {
                 <div className={trendStyle.textOverlay}>
                   <div className={`title-large ${trendStyle.leadTitle}`}>
                     <a href={story.slug}>{story.headline}</a>
+                    <div className={trendStyle.excerptOverlay}>
+                      {story.subheadline}
+                    </div>
                   </div>
-                  <div className={trendStyle.excerptOverlay}>
-                    {story.subheadline}
-                  </div>
+
                   <div className={`section-time ${trendStyle.sectionTime}`}>
                     <span>{story.sections[0]["display-name"]}</span> |{" "}
                     <span>

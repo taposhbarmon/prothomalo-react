@@ -113,18 +113,18 @@
   background: linear-gradient(transparent 50%, black);
 }
 .textOverlay .leadTitle {
-  bottom: 64px;
+  bottom: 35px;
   padding: 0 20px;
   position: inherit;
 }
 .leadTitle a {
   color: var(--white);
 }
-.excerptOverlay {
-  bottom: 35px;
-  padding: 0 20px;
+.leadTitle .excerptOverlay {
+  padding-top: 5px;
+  font-size: 16px;
   color: var(--white);
-  position: inherit;
+  font-weight: normal;
 }
 .textOverlay .sectionTime {
   bottom: 10px;
