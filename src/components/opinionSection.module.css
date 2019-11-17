@@ -44,6 +44,9 @@ h2 span {
   padding: 1px 7px;
   line-height: 35px;
 }
+span.boxShadow{
+  box-shadow: 8px 0px 0px var(--gray-dark), -6px 0 0 var(--gray-dark);
+}
 .authorSpeech {
   margin: 0 auto;
   width: 80%;
