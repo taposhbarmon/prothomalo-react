@@ -242,6 +242,7 @@
     height: 100%;
     width: 100%;
     background: linear-gradient(transparent 50%, black);
+    z-index: 1;
   }
   .leadOverlay .leadTitle {
     bottom: 30px;
@@ -328,9 +329,10 @@
     height: 100%;
     width: 100%;
     background: linear-gradient(transparent 50%, black);
+    z-index: 1;
   }
   .leadOverlay .leadTitle {
-    bottom: 30px;
+    bottom: 0;
     padding: 0 20px;
     color: var(--white);
     position: inherit;

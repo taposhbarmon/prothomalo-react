@@ -21,11 +21,11 @@ class FeaturedSroties extends Component {
     const allStories = await response.json();
     //console.log(allStories);
     this.setState({
-      leadStory: allStories.stories.slice(1, 2),
-      topMiddle: allStories.stories.slice(2, 3),
-      leftTop: allStories.stories.slice(3, 6),
-      leftBottom: allStories.stories.slice(1, 7),
-      rightColumn: allStories.stories.slice(4, 7)
+      leadStory: allStories.stories.slice(0, 1),
+      topMiddle: allStories.stories.slice(1, 2),
+      leftTop: allStories.stories.slice(2, 5),
+      leftBottom: allStories.stories.slice(4, 10),
+      rightColumn: allStories.stories.slice(9, 12)
     });
   }
 
@@ -56,9 +56,9 @@ class FeaturedSroties extends Component {
                   </div>
                 </div>
                 <div>
-                  <div className="">
+                  <div className="image-ratio image-mobipad">
                     <img
-                      className=""
+                      className="image-content"
                       src={
                         "http://thumbor-stg.assettype.com/" +
                         story["hero-image-s3-key"]

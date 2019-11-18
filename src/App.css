@@ -286,4 +286,7 @@ article::after {
   .image-ratio {
     max-width: 100%;
   }
+  .image-mobipad {
+    padding-bottom: 75%;
+  }
 }
